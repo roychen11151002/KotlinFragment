@@ -5,6 +5,7 @@ import android.os.Bundle
 import android.support.v4.app.Fragment
 import android.support.v4.app.FragmentManager
 import android.support.v4.app.FragmentPagerAdapter
+import android.widget.Toast
 import kotlinx.android.synthetic.main.activity_main.*
 
 const val Kotlin = "kotlinTest"
@@ -17,6 +18,14 @@ class MainActivity : AppCompatActivity() {
 
         val adapter = ViewPagerAdapter(supportFragmentManager)
         viewPager.adapter = adapter
+
+        txv1.setOnClickListener {
+            Toast.makeText(this, "text edit press", Toast.LENGTH_LONG).show()
+        }
+
+        btn1.setOnClickListener {
+            Toast.makeText(this, "button press", Toast.LENGTH_LONG).show()
+        }
     }
 }
 
